@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Распознаватель аудио</title>
+<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,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">
+<style>
+  :root{
+    --bg:#F4EFE6; --card:#FBF7EE; --input:#FFFFFF;
+    --text:#2C2826; --muted:#786C5E;
+    --accent:#B85540; --accent-tint:#F0E5D0;
+    --border:#D4C9B8; --border-soft:#E8DDC9; --success:#5C7A4F;
+    --display:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    --mono:ui-monospace,Menlo,Consolas,"Courier New",monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--text); font-family:var(--sans); line-height:1.55; padding:28px}
+  .obolochka{max-width:720px; margin:0 auto}
+  .verh{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px}
+  h1{font-family:var(--display); font-size:32px; font-weight:600; margin:0; color:var(--text); letter-spacing:.2px}
+  .nomer{font-family:var(--mono); font-size:13px; color:var(--accent); letter-spacing:1px; padding-top:10px}
+  .opisanie{color:var(--muted); font-size:15px; margin:0 0 18px; max-width:62ch}
+  .zametka{background:var(--accent-tint); border:1px solid var(--border); border-radius:12px; padding:12px 15px; margin:0 0 18px; font-size:13.5px; color:#5a4636}
+  .zametka b{color:var(--text)}
+  .zametka .stroka{margin:0 0 6px}
+  .zametka .stroka:last-child{margin:0}
+  .karta{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px; margin-bottom:16px}
+  .ryad{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+  button{font-size:15px; font-family:var(--sans); border:1px solid var(--border); background:#fff; color:var(--text); border-radius:10px; padding:10px 16px; cursor:pointer; transition:.12s}
+  button:hover{background:var(--accent-tint)}
+  button:active{transform:scale(.98)}
+  .glavnaya{background:var(--accent); color:#fff; border-color:var(--accent); font-weight:600; padding:12px 22px; font-size:16px}
+  .glavnaya:hover{background:#a2452f}
+  .glavnaya.zapis::before{content:"● "}
+  #status{font-family:var(--mono); font-size:12px; color:var(--muted); margin-left:4px}
+  textarea{width:100%; min-height:150px; margin-top:14px; resize:vertical; font-size:16px; font-family:var(--sans); line-height:1.6; color:var(--text); background:var(--input); border:1px solid var(--border); border-radius:10px; padding:12px}
+  .melkaya{font-size:13px; padding:8px 13px}
+  .yazyk{display:inline-flex; border:1px solid var(--border); border-radius:10px; overflow:hidden}
+  .yazyk button{border:0; border-radius:0; padding:9px 15px; font-size:14px; background:#fff; color:var(--muted)}
+  .yazyk button+button{border-left:1px solid var(--border)}
+  .yazyk button.vybran{background:var(--accent-tint); color:var(--text); font-weight:600}
+  .yazyk button:hover{background:var(--accent-tint)}
+  .nota{font-size:12px; color:var(--muted); margin-top:8px}
+  h2{font-family:var(--mono); font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin:24px 0 12px}
+  .razdel{border:0; border-top:1px dashed var(--border); margin:26px 0 0}
+  .zapisi{list-style:none; margin:0; padding:0}
+  .zap{background:var(--card); border:1px solid var(--border); border-radius:10px; padding:11px 13px; margin-bottom:8px}
+  .zap .vremya{font-family:var(--mono); font-size:12px; color:var(--muted); margin-bottom:4px}
+  .zap .txt{font-size:14px; white-space:pre-wrap; margin-bottom:8px}
+  .zap .knopki{display:flex; gap:8px}
+  .pusto{color:var(--muted); font-size:14px}
+  .preduprezh{background:#F7E7E0; border:1px solid var(--accent); color:#7a2d14; border-radius:10px; padding:12px 14px; font-size:14px; margin-bottom:16px; display:none}
+  .futer{margin-top:30px; padding-top:16px; border-top:1px dashed var(--border); font-family:var(--mono); font-size:12px; color:var(--muted); line-height:1.9}
+  .futer a{color:var(--accent); text-decoration:none}
+  .futer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="obolochka">
+  <div class="verh">
+    <h1>Распознаватель аудио</h1>
+    <div class="nomer">№ 09</div>
+  </div>
+  <p class="opisanie">Наговорите голосом — текст распознается, скопируйте и вставьте куда нужно. Без правок и упрощений: весь текст как есть.</p>
+
+  <div class="zametka">
+    <p class="stroka"><b>Где работает.</b> В браузере Google Chrome. При первом запуске нажмите «Разрешить всегда на этом сайте» — тогда микрофон не будет переспрашивать на паузах. В Яндекс.Браузере запрос повторяется постоянно — используйте Chrome.</p>
+    <p class="stroka"><b>Про язык.</b> Распознавание понимает один язык за раз — так устроен сервис браузера. Перед записью выберите русский или English. Смешанная речь (русская фраза с английскими словами внутри) распознаётся плохо при любом выборе: на русском английские слова запишутся кириллицей на слух, на английском развалится вся фраза. Выбор запоминается до следующего раза.</p>
+    <p class="stroka"><b>Про интернет и приватность.</b> Сама запись и история хранятся только на вашем компьютере. Но распознавание речи выполняет сервис браузера: во время записи звук с микрофона отправляется на серверы Google и возвращается текстом. Поэтому для работы нужен интернет, и это единственное, что уходит наружу. Готовый текст, история и всё остальное никуда не передаются.</p>
+  </div>
+
+  <div id="preduprezh" class="preduprezh"></div>
+  <div class="ryad" style="margin-bottom:14px">
+    <button id="knopkaProverka" class="melkaya">Проверить микрофон</button>
+    <span id="diagnostika" class="nota" style="margin:0"></span>
+  </div>
+
+  <div class="karta">
+    <div class="ryad">
+      <button id="knopkaZapis" class="glavnaya">Записать</button>
+      <button id="knopkaKopir" class="melkaya">Копировать</button>
+      <button id="knopkaSohr" class="melkaya">Сохранить в историю</button>
+      <button id="knopkaChist" class="melkaya">Очистить</button>
+      <span id="yazykBlok" class="yazyk">
+        <button type="button" id="yazykRu" class="vybran">Русский</button>
+        <button type="button" id="yazykEn">English</button>
+      </span>
+      <span id="status">готово</span>
+    </div>
+    <div class="ryad" style="margin-top:10px">
+      <label class="nota" style="margin:0;cursor:pointer"><input type="checkbox" id="dopisyvat"> дописывать к тексту, а не начинать заново</label>
+      <span id="schet" class="nota" style="margin:0 0 0 auto"></span>
+    </div>
+    <textarea id="pole" placeholder="Здесь появится распознанный текст. Можно править руками."></textarea>
+    <div class="nota">Пока идёт запись, паузы в речи не обрывают распознавание — оно продолжается, пока не нажать «Стоп». Текст в поле можно править руками прямо во время записи — правки не затираются. Старт и стоп с клавиатуры: <b>Ctrl + Пробел</b> (на Mac — <b>⌘ + Пробел</b>). Черновик сохраняется сам, поэтому закрытая вкладка его не унесёт.</div>
+  </div>
+
+  <hr class="razdel">
+  <h2>История за сегодня</h2>
+  <div class="ryad" style="margin-bottom:10px">
+    <button id="knopkaExport" class="melkaya">Скачать историю .md</button>
+  </div>
+  <ul id="istoriya" class="zapisi"></ul>
+
+  <div class="futer">
+    Идея — Оксана Старкова, вайб-код — ИИ2-3, ИИ10-2 · версия 2.0 · <a href="https://dreamlifewithai.ru/blog/utility/raznye-utility/raspoznavatel-audio/" target="_blank" rel="noopener">обновления и подробности</a><br>
+    Утилита разработана в рамках проекта <a href="https://dreamlifewithai.ru/" target="_blank" rel="noopener">СоТворяя Жизнь Мечты с ИИ</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  var pole=document.getElementById("pole"), status=document.getElementById("status");
+  var bZapis=document.getElementById("knopkaZapis"), bKopir=document.getElementById("knopkaKopir");
+  var bSohr=document.getElementById("knopkaSohr"), bChist=document.getElementById("knopkaChist");
+  var istoriyaEl=document.getElementById("istoriya"), preduprezh=document.getElementById("preduprezh");
+  var KLYUCH="raspoznavatel_istoriya_v1", SUTKI=24*60*60*1000;
+  var pishem=false, hotim=false, raspoznav=null, zafiksirovano="", posledneeSohr="";
+  var nachalo="";        // текст, который был в поле до начала записи (режим «дописывать»)
+  var pravkiRuchnye="";  // правка, сделанная руками во время записи
+  var CHERNOVIK="raspoznavatel_chernovik_v1";
+  var dopisyvat=document.getElementById("dopisyvat"), schet=document.getElementById("schet");
+  var yazykRu=document.getElementById("yazykRu"), yazykEn=document.getElementById("yazykEn");
+  var YAZYK_KLYUCH="raspoznavatel_yazyk_v1";
+  var yazyk="ru-RU";
+  try{ var sohr=localStorage.getItem(YAZYK_KLYUCH); if(sohr==="en-US"||sohr==="ru-RU") yazyk=sohr; }catch(e){}
+  function narisovatYazyk(){
+    yazykRu.className = yazyk==="ru-RU" ? "vybran" : "";
+    yazykEn.className = yazyk==="en-US" ? "vybran" : "";
+    pole.placeholder = yazyk==="ru-RU"
+      ? "Здесь появится распознанный текст. Можно править руками."
+      : "Recognised text will appear here. You can edit it by hand.";
+  }
+  function smenitYazyk(novyy){
+    if(yazyk===novyy) return;
+    yazyk=novyy;
+    try{ localStorage.setItem(YAZYK_KLYUCH, yazyk); }catch(e){}
+    narisovatYazyk();
+    // движок держит язык внутри себя — пересоздаём под новый
+    if(pishem){ stop(true); }
+    if(raspoznav){ try{ raspoznav.abort(); }catch(e){} raspoznav=null; }
+    st(yazyk==="ru-RU" ? "язык: русский" : "язык: английский");
+  }
+  yazykRu.addEventListener("click", function(){ smenitYazyk("ru-RU"); });
+  yazykEn.addEventListener("click", function(){ smenitYazyk("en-US"); });
+  var bExport=document.getElementById("knopkaExport");
+
+  if(!SR){ preduprezh.style.display="block"; preduprezh.textContent="Ваш браузер не умеет распознавать речь. Откройте этот файл в Google Chrome."; bZapis.disabled=true; }
+  function st(t){ status.textContent=t; }
+  function pokazatOshibku(t){ preduprezh.style.display="block"; preduprezh.textContent=t; }
+
+  // ── Проверка микрофона: отделяет «нет доступа к микрофону» от «нет доступа к распознаванию» ──
+  var bProverka=document.getElementById("knopkaProverka"), diag=document.getElementById("diagnostika");
+  bProverka.addEventListener("click", function(){
+    var stroki=[];
+    stroki.push("страница открыта по " + location.protocol.replace(":",""));
+    stroki.push(SR ? "распознавание в браузере есть" : "распознавания в браузере НЕТ");
+    diag.textContent = stroki.join(" · ") + " · проверяю микрофон…";
+    if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
+      diag.textContent = stroki.join(" · ") + " · браузер не даёт проверить микрофон";
+      return;
+    }
+    navigator.mediaDevices.getUserMedia({audio:true}).then(function(potok){
+      potok.getTracks().forEach(function(t){ t.stop(); });
+      stroki.push("микрофон доступен");
+      if(navigator.mediaDevices.enumerateDevices){
+        navigator.mediaDevices.enumerateDevices().then(function(spisok){
+          var mikr=spisok.filter(function(d){ return d.kind==="audioinput"; });
+          stroki.push("микрофонов найдено: "+mikr.length);
+          diag.textContent=stroki.join(" · ");
+          pokazatOshibku("Микрофон работает. Значит, дело не в нём: скорее всего, закрыт доступ к сервису распознавания речи — он живёт в интернете, и корпоративная сеть может его не пропускать. Попробуйте на домашнем компьютере.");
+        });
+      } else { diag.textContent=stroki.join(" · "); }
+    }).catch(function(err){
+      var imya=err && err.name ? err.name : "ошибка";
+      stroki.push("микрофон недоступен: "+imya);
+      diag.textContent=stroki.join(" · ");
+      if(imya==="NotAllowedError") pokazatOshibku("Доступ к микрофону запрещён. Если в адресной строке нет пункта «Разрешить» — запрет стоит на уровне настроек организации, и снять его самостоятельно нельзя.");
+      else if(imya==="NotFoundError") pokazatOshibku("Браузер не видит ни одного микрофона. Проверьте, что он подключён и не занят программой для конференций.");
+      else if(imya==="NotReadableError") pokazatOshibku("Микрофон занят другой программой. Закройте её и попробуйте снова.");
+      else pokazatOshibku("Микрофон проверить не удалось: "+imya);
+    });
+  });
+  function vniz(){ pole.scrollTop = pole.scrollHeight; }
+
+  function start(){
+    if(!SR) return;
+    if(dopisyvat.checked){
+      nachalo=pole.value ? pole.value.replace(/\s+$/,"")+"\n" : "";
+    } else {
+      nachalo=""; pole.value="";
+    }
+    zafiksirovano=""; pravkiRuchnye="";
+    hotim=true;
+    if(raspoznav && raspoznav.lang!==yazyk){ try{ raspoznav.abort(); }catch(e){} raspoznav=null; }
+    if(!raspoznav) sozdat();
+    try{ raspoznav.start(); }catch(e){}
+    pishem=true; bZapis.textContent="Стоп"; bZapis.classList.add("zapis"); st("слушаю…");
+  }
+  var zhdemSohranit=false, tZapas=null;
+  // Движок отдаёт последнюю фразу УЖЕ ПОСЛЕ вызова stop(). Поэтому сохраняем не сразу,
+  // а когда он отчитался, что закончил, — иначе теряется конец фразы.
+  function dosohranit(){
+    if(!zhdemSohranit) return;
+    zhdemSohranit=false;
+    if(tZapas){ clearTimeout(tZapas); tZapas=null; }
+    sohranit();
+  }
+  function stop(sohranyat){
+    hotim=false;
+    pishem=false; bZapis.textContent="Записать"; bZapis.classList.remove("zapis");
+    if(sohranyat){
+      zhdemSohranit=true;
+      st("записываю последние слова…");
+      tZapas=setTimeout(function(){ tZapas=null; dosohranit(); st("остановлено"); }, 1500);
+    } else { st("остановлено"); }
+    if(raspoznav){ try{ raspoznav.stop(); }catch(e){ dosohranit(); st("остановлено"); } }
+    else { dosohranit(); st("остановлено"); }
+  }
+
+  function sozdat(){
+    raspoznav=new SR(); raspoznav.lang=yazyk; raspoznav.continuous=true; raspoznav.interimResults=true;
+    raspoznav.onresult=function(e){
+      var prom="";
+      for(var i=e.resultIndex;i<e.results.length;i++){
+        var k=e.results[i][0].transcript;
+        if(e.results[i].isFinal){ zafiksirovano+=k+" "; } else { prom+=k; }
+      }
+      // схлопываем только пробелы и табуляции — переводы строк, набитые руками, остаются
+      var rech=(zafiksirovano+prom).replace(/[ \t]{2,}/g," ");
+      pole.value=nachalo+pravkiRuchnye+rech;
+      obnovitSchet(); vniz();
+    };
+    raspoznav.onerror=function(e){
+      if(e.error==="not-allowed"){ pokazatOshibku("Браузер не дал доступ к микрофону. Нажмите на значок слева в адресной строке и выберите «Разрешить». Если такого пункта нет — доступ закрыт настройками организации."); stop(false); }
+      else if(e.error==="service-not-allowed"){ pokazatOshibku("Распознавание запрещено настройками браузера или организации. Это не про сам микрофон: закрыт доступ именно к распознаванию речи."); stop(false); }
+      else if(e.error==="audio-capture"){ pokazatOshibku("Микрофон не найден или занят другой программой. Закройте программу для конференций и попробуйте снова."); stop(false); }
+      else if(e.error==="no-speech"){ st("слушаю… говорите"); }
+      else if(e.error==="network"){ st("нет сети для распознавания"); }
+      else if(e.error==="aborted"){}
+    };
+    raspoznav.onend=function(){
+      if(hotim){ setTimeout(function(){ if(hotim){ try{ raspoznav.start(); st("слушаю…"); }catch(e){} } }, 250); return; }
+      // движок закончил — теперь в поле точно всё, что было сказано
+      if(zhdemSohranit){ dosohranit(); st("остановлено"); }
+    };
+  }
+
+  // если человек правит поле во время записи — запоминаем правку и больше её не трогаем
+  pole.addEventListener("input", function(){
+    if(pishem){
+      var rech=zafiksirovano.replace(/[ \t]{2,}/g," ");
+      var v=pole.value;
+      var hvost=v.length>=rech.length ? v.slice(v.length-rech.length) : "";
+      if(hvost===rech){ pravkiRuchnye=v.slice(nachalo.length, v.length-rech.length); }
+    }
+    obnovitSchet(); sohranitChernovik();
+  });
+
+  function obnovitSchet(){
+    var t=pole.value.trim();
+    var slov=t?(t.match(/\S+/g)||[]).length:0;
+    schet.textContent = t ? (slov+" слов · "+t.length+" знаков") : "";
+  }
+
+  // ── черновик: чтобы закрытая вкладка не унесла надиктованное ──
+  function sohranitChernovik(){ try{ localStorage.setItem(CHERNOVIK, pole.value); }catch(e){} }
+  function vzyatChernovik(){ try{ return localStorage.getItem(CHERNOVIK)||""; }catch(e){ return ""; } }
+  setInterval(function(){ if(pishem) sohranitChernovik(); }, 3000);
+  window.addEventListener("beforeunload", sohranitChernovik);
+
+  // ── старт и стоп с клавиатуры ──
+  document.addEventListener("keydown", function(e){
+    if((e.ctrlKey||e.metaKey) && e.code==="Space"){
+      e.preventDefault();
+      if(pishem){ stop(true); } else { start(); }
+    }
+  });
+
+  bExport.addEventListener("click", function(){
+    var s=zagr();
+    if(!s.length){ st("история пуста"); return; }
+    var d=new Date(), p=function(x){return(x<10?"0":"")+x;};
+    var den=d.getFullYear()+"-"+p(d.getMonth()+1)+"-"+p(d.getDate());
+    var md="# Распознанное за "+den+"\n\n";
+    s.slice().reverse().forEach(function(z){ md+="## "+vr(z.v)+"\n\n"+z.t+"\n\n"; });
+    var blob=new Blob([md],{type:"text/markdown"});
+    var url=URL.createObjectURL(blob), a=document.createElement("a");
+    a.href=url; a.download="Распознанное_"+den+".md";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(url); },1000);
+    st("история скачана");
+  });
+
+  bZapis.addEventListener("click", function(){ if(pishem){ stop(true); } else { start(); } });
+  bKopir.addEventListener("click", function(){ if(!pole.value.trim()){ st("нечего копировать"); return; } kopir(pole.value); });
+  function kopir(t){ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(function(){st("скопировано");},function(){zap(t);}); } else zap(t); }
+  function zap(t){ pole.focus(); pole.select(); try{document.execCommand("copy"); st("скопировано");}catch(e){ st("скопируйте вручную");} }
+  bSohr.addEventListener("click", function(){ sohranit(); });
+  bChist.addEventListener("click", function(){ pole.value=""; zafiksirovano=""; pravkiRuchnye=""; nachalo=""; posledneeSohr=""; sohranitChernovik(); obnovitSchet(); st("очищено"); });
+
+  function sohranit(){
+    var t=pole.value.trim();
+    if(!t){ st("нечего сохранять"); return; }
+    if(t===posledneeSohr){ st("уже в истории"); return; }
+    var s=zagr(); s.unshift({t:t,v:Date.now()}); localStorage.setItem(KLYUCH,JSON.stringify(s));
+    posledneeSohr=t; st("сохранено в историю"); ris();
+  }
+  function zagr(){ var s=[]; try{ s=JSON.parse(localStorage.getItem(KLYUCH)||"[]"); }catch(e){ s=[]; } var g=Date.now()-SUTKI; var c=s.filter(function(z){return z.v>=g;}); if(c.length!==s.length) localStorage.setItem(KLYUCH,JSON.stringify(c)); return c; }
+  function vr(ms){ var d=new Date(ms); function p(n){return(n<10?"0":"")+n;} return p(d.getHours())+":"+p(d.getMinutes()); }
+  function ris(){
+    var s=zagr(); istoriyaEl.innerHTML="";
+    if(!s.length){ var li=document.createElement("li"); li.className="pusto"; li.textContent="Пока пусто. Записи хранятся сутки и потом удаляются сами."; istoriyaEl.appendChild(li); return; }
+    s.forEach(function(z){
+      var li=document.createElement("li"); li.className="zap";
+      var v=document.createElement("div"); v.className="vremya"; v.textContent=vr(z.v);
+      var t=document.createElement("div"); t.className="txt"; t.textContent=z.t;
+      var kn=document.createElement("div"); kn.className="knopki";
+      var k1=document.createElement("button"); k1.className="melkaya"; k1.textContent="Копировать"; k1.onclick=function(){ kopir(z.t); };
+      var k2=document.createElement("button"); k2.className="melkaya"; k2.textContent="Удалить"; k2.onclick=function(){ ud(z.v); };
+      kn.appendChild(k1); kn.appendChild(k2);
+      li.appendChild(v); li.appendChild(t); li.appendChild(kn); istoriyaEl.appendChild(li);
+    });
+  }
+  function ud(v){ var s=zagr().filter(function(z){return z.v!==v;}); localStorage.setItem(KLYUCH,JSON.stringify(s)); ris(); }
+
+  narisovatYazyk();
+
+  // при открытии подхватываем черновик прошлой сессии
+  var ch=vzyatChernovik();
+  if(ch && ch.trim()){ pole.value=ch; st("восстановлен черновик прошлой сессии"); }
+  obnovitSchet();
+  ris();
+})();
+</script>
+</body>
+</html>
